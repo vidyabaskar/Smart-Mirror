@@ -95,7 +95,7 @@ def main():
     credentials = get_credentials()
     http = credentials.authorize(httplib2.Http())
     service = discovery.build('gmail', 'v1', http=http)
-    thread=ListThreadsMatchingQuery(service,'me','from:ggm332@gmail.com is:unread')
+    thread=ListThreadsMatchingQuery(service,'me','from:XXXXXX@gmail.com is:unread')
     if thread:
         print("You got a mail!")
         GPIO.output(3, True)
